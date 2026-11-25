@@ -30,7 +30,7 @@ szinvalaszt.id = "szinvalaszt";
 szinvalaszt.className = "form-select";
 
 const szinalap = document.createElement("option");
-szinalap.textContent = "-- Válassz mez színt! --";
+szinalap.textContent = "-- Válassz színt! --";
 szinalap.value = "";
 
 const otthoni = document.createElement("option");
