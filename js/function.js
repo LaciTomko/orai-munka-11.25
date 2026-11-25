@@ -73,7 +73,7 @@ const fejlec = document.getElementById("fejlec");
 
 szinmenu.addEventListener("change", function(){
     const val = this.value;
-    console.log(`Kiválasztott mez szín: ${val}`);
+    console.log(`Kiválasztott szín: ${val}`);
 
     if (val == "otthoni")
     {

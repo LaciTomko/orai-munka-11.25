@@ -42,7 +42,7 @@ idegenbeli.textContent = "Idegenbeli";
 idegenbeli.value = "idegenbeli";
 
 const harmadik = document.createElement("option");
-harmadik.textContent = "3 mez szin";
+harmadik.textContent = "3. mez szin";
 harmadik.value = "harmadik";
 
 szinvalaszt.append(szinalap, otthoni, idegenbeli, harmadik);
