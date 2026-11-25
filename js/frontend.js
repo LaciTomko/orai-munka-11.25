@@ -13,7 +13,6 @@ const alcim = document.createElement("h2");
 alcim.className = "display-6";
 alcim.textContent = "Més que un club";
 
-
 const fejvalasztsor = document.createElement("div");
 fejvalasztsor.className = "row mt-3 justify-content-center";
 
@@ -55,6 +54,44 @@ const szoveg = document.createElement("p");
 szoveg.id = "szoveg";
 szoveg.textContent = "Válassz egyet a fenti opciók közül!";
 
+const kepkontener = document.createElement("div");
+kepkontener.className = "container mt-4";
+
+const kepsor = document.createElement("div");
+kepsor.className = "row justify-content-center";
+
+const keposzlop = document.createElement("div");
+keposzlop.className = "col-12 col-sm-6 text-center";
+
+const kepcim = document.createElement("h4");
+kepcim.id = "kepcim";
+kepcim.textContent = "Képgaléria";
+
+const kepvalaszt = document.createElement("select");
+kepvalaszt.id = "kepvalaszt";
+kepvalaszt.className = "form-select mb-3";
+
+const kepmain = document.createElement("option");
+kepmain.textContent = "-- Válassz képet! --";
+kepmain.value = "";
+
+const kep1 = document.createElement("option");
+kep1.textContent = "Spotify Camp Nou";
+kep1.value = "campnou";
+
+const kep2 = document.createElement("option");
+kep2.textContent = "FC Barcelona Címer";
+kep2.value = "cimer";
+
+const kep3 = document.createElement("option");
+kep3.textContent = "Csapatkép";
+kep3.value = "csapat";
+
+const kep = document.createElement("img");
+kep.id = "kep";
+kep.className = "img-fluid rounded";
+kep.alt = "Válassz egy képet a menüből!";
+
 szovegoszlop.appendChild(szovegcim);
 szovegoszlop.appendChild(szoveg);
 szovegsor.appendChild(szovegoszlop);
@@ -63,8 +100,13 @@ szovegkontener.appendChild(szovegsor);
 fejvalaszt.append(valasztas, bevezetes, tortenete, klubrol);
 fejvalasztoszlop.appendChild(fejvalaszt);
 fejvalasztsor.appendChild(fejvalasztoszlop);
-
 cimkontener.append(cim, alcim, fejvalasztsor);
+
+kepvalaszt.append(kepmain, kep1, kep2, kep3);
+keposzlop.append(kepcim, kepvalaszt, kep);
+kepsor.appendChild(keposzlop);
+kepkontener.appendChild(kepsor);
 
 document.body.appendChild(cimkontener);
 document.body.appendChild(szovegkontener);
+document.body.appendChild(kepkontener);
