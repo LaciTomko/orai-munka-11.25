@@ -1,3 +1,10 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const most = new Date();
+    const datum = most.toLocaleDateString();
+    const ido = most.toLocaleTimeString();
+    console.log(`Az oldal betöltve: ${datum}  - ${ido}`);
+});
+
 async function txtBeolvasas(fajl, elem) {
     console.log(`Fájl beolvasása: ${fajl}`);
     const response = await fetch(fajl);
@@ -6,7 +13,6 @@ async function txtBeolvasas(fajl, elem) {
     elem.textContent = szoveg;
     elem.style.textAlign = "left";
     elem.style.lineHeight = "1.5";
-    elem.style.textIndent = "15px";
     elem.style.whiteSpace = "pre-line";
 }
 
@@ -59,5 +65,29 @@ kepmenu.addEventListener("change", function(){
     else
     {
         kepelem.src = "";
+    }
+});
+
+const szinmenu = document.getElementById("szinvalaszt");
+const fejlec = document.getElementById("fejlec");
+
+szinmenu.addEventListener("change", function(){
+    const val = this.value;
+    console.log(`Kiválasztott mez szín: ${val}`);
+
+    if (val == "otthoni")
+    {
+        fejlec.style.backgroundColor = "blue";
+        fejlec.style.borderBottomColor = "red";
+    }
+    else if (val == "idegenbeli")
+    {
+        fejlec.style.backgroundColor = "black";
+        fejlec.style.borderBottomColor = "gold";
+    }
+    else if (val == "harmadik")
+    {
+        fejlec.style.backgroundColor = "orange";
+        fejlec.style.borderBottomColor = "navy";
     }
 });

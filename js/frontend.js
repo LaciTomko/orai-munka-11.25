@@ -12,6 +12,44 @@ alcim.textContent = "Més que un club";
 
 cimkontener.append(cim, alcim);
 
+const szinkontener = document.createElement("div");
+szinkontener.className = "container mt-4";
+
+const szinsor = document.createElement("div");
+szinsor.className = "row justify-content-center";
+
+const szinoszlop = document.createElement("div");
+szinoszlop.className = "col-12 col-sm-6 text-center";
+
+const szincim = document.createElement("h4");
+szincim.id = "szincim";
+szincim.textContent = "Mez színek";
+
+const szinvalaszt = document.createElement("select");
+szinvalaszt.id = "szinvalaszt";
+szinvalaszt.className = "form-select";
+
+const szinalap = document.createElement("option");
+szinalap.textContent = "-- Válassz mez színt! --";
+szinalap.value = "";
+
+const otthoni = document.createElement("option");
+otthoni.textContent = "Otthoni";
+otthoni.value = "otthoni";
+
+const idegenbeli = document.createElement("option");
+idegenbeli.textContent = "Idegenbeli";
+idegenbeli.value = "idegenbeli";
+
+const harmadik = document.createElement("option");
+harmadik.textContent = "3 mez szin";
+harmadik.value = "harmadik";
+
+szinvalaszt.append(szinalap, otthoni, idegenbeli, harmadik);
+szinoszlop.append(szincim, szinvalaszt);
+szinsor.appendChild(szinoszlop);
+szinkontener.appendChild(szinsor);
+
 const szovegkontener = document.createElement("div");
 szovegkontener.className = "container mt-4";
 
@@ -63,7 +101,7 @@ szovegsor.appendChild(szovegoszlop);
 szovegkontener.append(fejvalasztsor, szovegsor);
 
 const kepkontener = document.createElement("div");
-kepkontener.className = "container mt-4";
+kepkontener.className = "container mt-4 mb-4";
 
 const kepsor = document.createElement("div");
 kepsor.className = "row justify-content-center";
@@ -105,45 +143,7 @@ keposzlop.append(kepcim, kepvalaszt, kep);
 kepsor.appendChild(keposzlop);
 kepkontener.appendChild(kepsor);
 
-const szinkontener = document.createElement("div");
-szinkontener.className = "container mt-4 mb-4";
-
-const szinsor = document.createElement("div");
-szinsor.className = "row justify-content-center";
-
-const szinoszlop = document.createElement("div");
-szinoszlop.className = "col-12 col-sm-6 text-center";
-
-const szincim = document.createElement("h4");
-szincim.id = "szincim";
-szincim.textContent = "Mez színek";
-
-const szinvalaszt = document.createElement("select");
-szinvalaszt.id = "szinvalaszt";
-szinvalaszt.className = "form-select";
-
-const szinmain = document.createElement("option");
-szinmain.textContent = "-- Válassz mez színt! --";
-szinmain.value = "";
-
-const otthoni = document.createElement("option");
-otthoni.textContent = "Otthoni";
-otthoni.value = "otthoni";
-
-const idegenbeli = document.createElement("option");
-idegenbeli.textContent = "Idegenbeli";
-idegenbeli.value = "idegenbeli";
-
-const harmadik = document.createElement("option");
-harmadik.textContent = "3 mez szin";
-harmadik.value = "harmadik";
-
-szinvalaszt.append(szinmain, otthoni, idegenbeli, harmadik);
-szinoszlop.append(szincim, szinvalaszt);
-szinsor.appendChild(szinoszlop);
-szinkontener.appendChild(szinsor);
-
 document.body.appendChild(cimkontener);
+document.body.appendChild(szinkontener);
 document.body.appendChild(szovegkontener);
 document.body.appendChild(kepkontener);
-document.body.appendChild(szinkontener);
