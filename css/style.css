@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Prosto+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+body {
+    background-color: black;
+    color: white;
+    background-image: url('https://pbs.twimg.com/media/HSNRiPyXYAAgK8T?format=webp&name=large');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#fejlec {
+    background-color: blue;
+    border-bottom: 5px solid red;
+}
+
+#fejlec h1 {
+    color: white;
+    font-family: "Prosto One", sans-serif;
+}
+
+#fejlec h2 {
+    color: red;
+}
+
+#szovegcim {
+    color: blue;
+}
+
+#fejvalaszt {
+    background-color: black;
+    color: white;
+    border: 2px solid red;
+    border-radius: 5px;
+}
+
+.container.mt-4 {
+    background-color: black;
+    border: 2px solid blue;
+    border-left: 6px solid red;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+p {
+    font-family: "Titillium Web", sans-serif;
+}
