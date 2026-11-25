@@ -11,7 +11,7 @@ async function txtBeolvasas(fajl, elem) {
 }
 
 const menu = document.getElementById("fejvalaszt");
-const cimm = document.getElementById("szovegcim");
+const szcim = document.getElementById("szovegcim");
 const szov = document.getElementById("szoveg");
 
 menu.addEventListener("change", function(event){
@@ -20,19 +20,44 @@ menu.addEventListener("change", function(event){
     
     if (val == "bevezetes")
     {
-        cimm.textContent = "Bevezetés";
+        szcim.textContent = "Bevezetés";
         txtBeolvasas("./forras/bevezetes.txt", szov);
     }
     else if (val == "tortenete")
     {
-        cimm.textContent = "Története";
+        szcim.textContent = "Története";
         txtBeolvasas("./forras/tortenet.txt", szov);
     }
     else if (val == "klubrol")
     {
-        cimm.textContent = "A Klubról";
+        szcim.textContent = "A Klubról";
         txtBeolvasas("./forras/klub.txt", szov);
     }
     
     event.preventDefault();
+});
+
+const kepmenu = document.getElementById("kepvalaszt");
+const kepelem = document.getElementById("kep");
+
+kepmenu.addEventListener("change", function(){
+    const val = this.value;
+    console.log(`Kiválasztott kép: ${val}`);
+
+    if (val == "campnou")
+    {
+        kepelem.src = "./img/campnou.webp";
+    }
+    else if (val == "cimer")
+    {
+        kepelem.src = "./img/cimer.jpg";
+    }
+    else if (val == "csapat")
+    {
+        kepelem.src = "./img/csapat.jpg";
+    }
+    else
+    {
+        kepelem.src = "";
+    }
 });
